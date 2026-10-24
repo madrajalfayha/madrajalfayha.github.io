@@ -3,16 +3,16 @@ const teams = {
  fayha:{name:'الفيحاء',logo:'logo.png'},riyadh:{name:'الرياض',logo:'assets/riyadh.png'},khaleej:{name:'الخليج',logo:'assets/khaleej.png'},ahli:{name:'الأهلي',logo:'assets/ahli.png'},hazem:{name:'الحزم',logo:'assets/hazem.png'},shabab:{name:'الشباب',logo:'assets/shabab.png'},ittihad:{name:'الاتحاد',logo:'assets/ittihad.png'},kholood:{name:'الخلود',logo:'assets/kholood.png'}
 };
 const forms={
- fayha:{source:'teams/582749/overview/al-fayha',games:[['12 سبتمبر','الشباب','الفيحاء',0,0],['8 سبتمبر','الاتحاد','الفيحاء',2,1],['3 سبتمبر','الفيحاء','الخلود',2,2],['28 أغسطس','الفيحاء','أبها',3,2],['25 أغسطس','التعاون','الفيحاء',0,0]]},
+ fayha:{source:'teams/582749/overview/al-fayha',games:[['22 أكتوبر','الحزم','الفيحاء',2,2],['19 أكتوبر','الفيحاء','الأهلي',2,3],['15 أكتوبر','الخليج','الفيحاء',2,0],['11 أكتوبر','الفيحاء','الرياض',1,1],['12 سبتمبر','الشباب','الفيحاء',0,0]]},
  riyadh:{source:'teams/582739/overview/al-riyadh',games:[['13 سبتمبر','الرياض','الخلود',2,0],['7 سبتمبر','الخليج','الرياض',0,0],['4 سبتمبر','الأهلي','الرياض',5,0],['28 أغسطس','الرياض','نيوم',1,0],['25 أغسطس','الشباب','الرياض',3,3]]},
  khaleej:{source:'teams/550433/overview/al-khaleej',games:[['12 سبتمبر','الخليج','النصر',1,1],['7 سبتمبر','الخليج','الرياض',0,0],['3 سبتمبر','نيوم','الخليج',3,0],['28 أغسطس','الخليج','الهلال',1,5],['25 أغسطس','أبها','الخليج',1,1]]},
  ahli:{source:'teams/2530/overview/al-ahli',games:[['19 سبتمبر','صن داونز','الأهلي',2,1,'كأس القارات للأندية'],['14 سبتمبر','الأهلي','باختاكور',1,1,'نخبة آسيا'],['11 سبتمبر','الأهلي','الحزم',3,1],['8 سبتمبر','القادسية','الأهلي',3,2],['4 سبتمبر','الأهلي','الرياض',5,0]]},
  hazem:{source:'teams/101911/overview/al-hazem',games:[['11 سبتمبر','الأهلي','الحزم',3,1],['8 سبتمبر','الحزم','التعاون',1,0],['5 سبتمبر','الفيصلي','الحزم',0,0],['30 أغسطس','الحزم','الشباب',1,1],['24 أغسطس','الاتحاد','الحزم',3,2]]}
 };const matches={
- riyadh:{home:'fayha',away:'riyadh',date:'11 أكتوبر 2026',time:'16:40',round:8,stadium:'مدينة المجمعة الرياضية',city:'المجمعة',source:'matches/al-riyadh-vs-al-fayha/8o0flw6t'},
- khaleej:{home:'khaleej',away:'fayha',date:'15 أكتوبر 2026',time:'17:50',round:9,stadium:'استاد الأمير محمد بن فهد',city:'الدمام',source:'matches/al-khaleej-vs-al-fayha/86yd3uzi'},
- ahli:{home:'fayha',away:'ahli',date:'19 أكتوبر 2026',time:'18:05',round:10,stadium:'مدينة المجمعة الرياضية',city:'المجمعة',source:'matches/al-ahli-vs-al-fayha/26olokzh'},
- hazem:{home:'hazem',away:'fayha',date:'22 أكتوبر 2026',time:'16:40',round:11,stadium:'ملعب نادي الحزم',city:'الرس',source:'matches/al-hazem-vs-al-fayha/2zo85b6n'},
+ riyadh:{home:'fayha',away:'riyadh',date:'11 أكتوبر 2026',time:'16:40',round:8,stadium:'مدينة المجمعة الرياضية',city:'المجمعة',source:'matches/al-riyadh-vs-al-fayha/8o0flw6t',score:[1,1],goals:[{minute:'16',team:'fayha',scorer:'لازارو فينيسيوس'},{minute:'90+2',team:'riyadh',scorer:'محمود حسن تريزيغيه'}]},
+ khaleej:{home:'khaleej',away:'fayha',date:'15 أكتوبر 2026',time:'17:50',round:9,stadium:'استاد الأمير محمد بن فهد',city:'الدمام',source:'matches/al-khaleej-vs-al-fayha/86yd3uzi',score:[2,0],goals:[{minute:'52',team:'khaleej',scorer:'جوشوا كينغ'},{minute:'80',team:'khaleej',scorer:'ماتيو بينيغاس'}]},
+ ahli:{home:'fayha',away:'ahli',date:'19 أكتوبر 2026',time:'18:05',round:10,stadium:'مدينة المجمعة الرياضية',city:'المجمعة',source:'matches/al-ahli-vs-al-fayha/26olokzh',score:[2,3],goals:[{minute:'44',team:'fayha',scorer:'هوغو مورا'},{minute:'45+3',team:'ahli',scorer:'أرتيم بوندارينكو'},{minute:'59',team:'ahli',scorer:'فراس البريكان',penalty:true},{minute:'65',team:'fayha',scorer:'جيسون ريميسيرو'},{minute:'70',team:'ahli',scorer:'أرتيم بوندارينكو'}]},
+ hazem:{home:'hazem',away:'fayha',date:'22 أكتوبر 2026',time:'16:40',round:11,stadium:'ملعب نادي الحزم',city:'الرس',source:'matches/al-hazem-vs-al-fayha/2zo85b6n',score:[2,2],goals:[{minute:'5',team:'hazem',scorer:'بونور موغيشا',assist:'أمير سعيود'},{minute:'33',team:'fayha',scorer:'فاشون ساكالا'},{minute:'68',team:'fayha',scorer:'سلطان تنكر',og:true},{minute:'89',team:'hazem',scorer:'أمير سعيود',penalty:true}]},
  shabab:{home:'shabab',away:'fayha',date:'12 سبتمبر 2026',time:'21:00',round:7,stadium:'اس اتش جي أرينا',city:'الرياض',score:[0,0],source:'matches/al-shabab-vs-al-fayha/2zoa6omq',goals:[],lineups:[
  {formation:'4-4-2',players:['موري دياو','محمد الثاني','مامادو باري','تين يدفاي','ضاري العنزي','عبدالرحمن العبود','جوش براونهيل','ياسين عدلي','يانيك كاراسكو','روجر مارتينيز','ريكاردو ماتياس']},
  {formation:'4-1-4-1',players:['أورلاندو موسكيرا','محمد البقعاوي','مخير الرشيدي','عمر كولي','أحمد بامسعود','هوغو مورا','جيسون ريميسيرو','ألفا سيميدو','منصور البيشي','فاشون ساكالا','لازارو فينيسيوس']}]},
@@ -44,18 +44,18 @@ Object.assign(matches,{
   {minute:'90+4',team:'abha',scorer:'ميتشي باتشوايي',penalty:true}]},
  taawoun:{home:'taawoun',away:'fayha',date:'25 أغسطس 2026',time:'',round:3,stadium:'ملعب الأول',city:'بريدة',score:[0,0],goals:[]}
 });
-const kick={riyadh:'2026-10-11T16:40',khaleej:'2026-10-15T17:50',ahli:'2026-10-19T18:05',hazem:'2026-10-22T16:40',faisaly:'2026-10-31T17:55'};
-const UP=Object.keys(kick),PREV=['shabab','ittihad','kholood','abha','taawoun'];
+const kick={faisaly:'2026-10-31T17:55'};
+const UP=Object.keys(kick),PREV=['hazem','ahli','khaleej','riyadh','shabab'];
 const R=window.remote||{};Object.entries(R.matches||{}).forEach(([i,v])=>{if(matches[i]){Object.assign(matches[i],v.m||{});if(v.k)kick[i]=v.k}});window.SITE={matches,kick,UP};
-const S=Object.assign({pos:12,pts:6,p:7,gf:7,ga:11,w:1,d:3,l:3},R.standing||{});
-const leaders={goals:[['هوغو مورا','moura',2],['لازارو فينيسيوس','lazaro',2]],assists:[['نواف الحارثي','nawaf',1],['لازارو فينيسيوس','lazaro',1],['أحمد بامسعود','bamsaud',1]]};
+const S=Object.assign({pos:14,pts:8,p:11,gf:11,ga:18,w:1,d:5,l:5},R.standing||{});
+const leaders={goals:[['هوغو مورا','moura',3],['لازارو فينيسيوس','lazaro',3]],assists:[['أحمد بامسعود','bamsaud',2],['نواف الحارثي','nawaf',1],['لازارو فينيسيوس','lazaro',1]]};
 const squad=[
  {n:'عبدالرؤوف الدقيل',p:'gk',pos:'حارس مرمى',no:'1',id:1554630},
  {n:'أورلاندو موسكيرا',p:'gk',pos:'حارس مرمى',no:'52',id:531913},
  {n:'سطام الشمري',p:'gk',pos:'حارس مرمى',no:'13',id:1671251},
  {n:'أسامة الثميري',p:'gk',pos:'حارس مرمى',no:'31',id:1554626},
  {n:'مخير الرشيدي',p:'def',pos:'قلب دفاع',no:'2',id:915152},
- {n:'باولو أوليفيرا',p:'def',pos:'قلب دفاع',no:'15',id:193927},
+ {n:'باولو أوليفيرا',p:'def',pos:'قلب دفاع',no:'15',id:193927,injuryType:'غاب عن مباراة الحزم (إعلان النادي)',injuryDuration:'غير معلنة'},
  {n:'زياد الصحفي',p:'def',pos:'قلب دفاع',no:'21',id:702375},
  {n:'عمر كولي',p:'def',pos:'قلب دفاع',no:'25',id:440369},
  {n:'علي ظافر الحرشان',p:'def',pos:'مدافع',no:'42',id:2139535},
@@ -70,11 +70,11 @@ const squad=[
  {n:'منصور البيشي',p:'mid',pos:'وسط',no:'14',id:1054058},
  {n:'علي الحسين',p:'mid',pos:'وسط هجومي',no:'6',id:1671250},
  {n:'ياغو سوزا',p:'mid',pos:'وسط هجومي',no:'40',id:1590255},
- {n:'عبدالله القحطاني',p:'mid',pos:'وسط هجومي',no:'55',id:1039533},
- {n:'عبدالهادي الحراجين',p:'mid',pos:'وسط هجومي',no:'',id:618100},
+ {n:'عبدالله القحطاني',p:'mid',pos:'وسط هجومي',no:'55',id:1039533,injuryType:'غاب عن مباراة الحزم (إعلان النادي)',injuryDuration:'غير معلنة'},
+ {n:'عبدالهادي الحراجين',p:'mid',pos:'وسط هجومي',no:'',id:618100,injuryType:'غاب عن مباراة الحزم (إعلان النادي)',injuryDuration:'غير معلنة'},
  {n:'مالك العبدالمنعم',p:'fwd',pos:'مهاجم',no:'9',id:1130172},
  {n:'فاشون ساكالا',p:'fwd',pos:'مهاجم',no:'10',id:825765},
- {n:'لازارو فينيسيوس',p:'fwd',pos:'جناح أيسر',no:'17',id:1111981},
+ {n:'لازارو فينيسيوس',p:'fwd',pos:'جناح أيسر',no:'17',id:1111981,injuryType:'غاب عن مباراة الحزم (إعلان النادي)',injuryDuration:'غير معلنة'},
  {n:'جيسون ريميسيرو',p:'fwd',pos:'جناح أيمن',no:'23',id:451984},
  {n:'ريان عناد',p:'fwd',pos:'جناح أيمن',no:'77',id:1780605},
  {n:'سلطان الجابري',p:'fwd',pos:'جناح أيمن',no:'27',id:1920081},
@@ -118,8 +118,9 @@ $('#upcoming').innerHTML=UP.map(id=>{const m=matches[id];return `<button class="
 $('#results').innerHTML=PREV.map(id=>{const m=matches[id],s=st(m);return `<button class="rc" data-m="${id}"><div class="m"><span>الجولة ${m.round} · ${m.date}</span><span class="tag ${s[0]}">${s[1]}</span></div>${pair(m)}<div class="f" style="margin-top:10px;font-size:12px;color:var(--mut);font-weight:700">الأهداف والتفاصيل ↗</div></button>`}).join('');
 $('#side').innerHTML=`<div class="card stand"><h3>ترتيب الفيحاء في دوري روشن</h3><div class="pos"><b>${S.pos}</b><span>المركز من 18 فريقًا<br>${S.pts} نقاط بعد ${S.p} جولات</span></div>
 <div class="stats4"><div><b>${S.p}</b><small>لعب</small></div><div><b>${S.gf}</b><small>له</small></div><div><b>${S.ga}</b><small>عليه</small></div><div><b>${S.gf-S.ga>0?"+":""}${S.gf-S.ga}</b><small>الفارق</small></div></div>
-${R.standing?"":'<table class="mini"><tr><td>11</td><td>الرياض</td><td>8</td></tr><tr class="me"><td>12</td><td>الفيحاء</td><td>6</td></tr><tr><td>13</td><td>الخليج</td><td>5</td></tr></table>'}<p class="note" style="color:#9fb0e6">${S.w} فوز · ${S.d} تعادل · ${S.l} خسائر.${R.standing?"":" الترتيب بتاريخ 27 سبتمبر 2026."}</p></div>
-<div class="card"><h3>هدافو الفريق</h3><div class="lead">${leaders.goals.map(p=>`<figure><img src="assets/${p[1]}.png" alt="${p[0]}">${p[0]}<b>${p[2]} هدف</b></figure>`).join('')}</div><h3 style="margin-top:18px">الأكثر صناعة</h3><div class="lead">${leaders.assists.map(p=>`<figure><img src="assets/${p[1]}.png" alt="${p[0]}">${p[0]}<b>${p[2]} تمريرة</b></figure>`).join('')}</div><p class="note">إحصاءات الدوري حتى 27 سبتمبر 2026.</p></div>`;
+<p class="note" style="color:#9fb0e6">${S.w} فوز · ${S.d} تعادل · ${S.l} خسائر.${R.standing?"":" الترتيب بتاريخ 24 أكتوبر 2026."}</p></div>
+<div class="card"><h3>آخر الإصابات</h3><div class="injl">${squad.filter(p=>p.injuryType||p.inj).map(p=>`<div class="injr"><b>${p.n}</b><small>${p.pos} · ${injuryText(p)}</small></div>`).join('')||'<div class="empty">لا إصابات معلنة.</div>'}</div><p class="note">حسب إعلان النادي قبل مباراة الحزم (22 أكتوبر 2026)؛ تُحدَّث المدد عند إعلانها.</p></div>
+<div class="card"><h3>هدافو الفريق</h3><div class="lead">${leaders.goals.map(p=>`<figure><img src="assets/${p[1]}.png" alt="${p[0]}">${p[0]}<b>${p[2]} هدف</b></figure>`).join('')}</div><h3 style="margin-top:18px">الأكثر صناعة</h3><div class="lead">${leaders.assists.map(p=>`<figure><img src="assets/${p[1]}.png" alt="${p[0]}">${p[0]}<b>${p[2]} تمريرة</b></figure>`).join('')}</div><p class="note">إحصاءات الدوري حتى الجولة 11 (22 أكتوبر 2026) من تقارير المباريات.</p></div>`;
 /* news, store */
 const NC={all:'الكل',match:'المباريات',train:'التمارين والجاهزية',transfer:'الانتقالات'};
 function drawNews(k){

@@ -240,3 +240,5 @@ footer a{color:var(--or2);text-decoration:underline}
 @media(max-width:560px){.adp .g2{grid-template-columns:1fr}}
 
 
+
+.injl{display:grid;gap:8px}.injr{padding:10px 12px;border:1px solid var(--line);border-radius:12px;border-inline-start:4px solid var(--loss)}.injr b{display:block;font-size:15px}.injr small{color:var(--mut);font-weight:700}
