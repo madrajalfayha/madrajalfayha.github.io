@@ -47,7 +47,7 @@ Object.assign(matches,{
 const kick={faisaly:'2026-10-31T17:55'};
 const UP=Object.keys(kick),PREV=['hazem','ahli','khaleej','riyadh','shabab'];
 const R=window.remote||{};Object.entries(R.matches||{}).forEach(([i,v])=>{if(matches[i]){Object.assign(matches[i],v.m||{});if(v.k)kick[i]=v.k}});window.SITE={matches,kick,UP};
-const S=Object.assign({pos:14,pts:8,p:11,gf:11,ga:18,w:1,d:5,l:5},R.standing||{});
+const S=Object.assign({pos:14,pts:8,p:11,gf:12,ga:19,w:1,d:5,l:5},R.standing||{});
 const leaders={goals:[['هوغو مورا','moura',3],['لازارو فينيسيوس','lazaro',3]],assists:[['أحمد بامسعود','bamsaud',2],['نواف الحارثي','nawaf',1],['لازارو فينيسيوس','lazaro',1]]};
 const squad=[
  {n:'عبدالرؤوف الدقيل',p:'gk',pos:'حارس مرمى',no:'1',id:1554630},
@@ -96,7 +96,7 @@ const badge=(id,c='badge')=>{const T=teams[id];return `<img class="${c}" src="${
 const t=id=>teams[id].name;
 const st=m=>{const h=m.home==='fayha',f=h?m.score[0]:m.score[1],a=h?m.score[1]:m.score[0];return f>a?['w','فوز']:f<a?['l','خسارة']:['d','تعادل']};
 const when=id=>new Date(kick[id]+':00+03:00');
-const pair=m=>`<div class="pair"><div class="tm">${badge(m.home)}<span>${t(m.home)}</span><small>صاحب الأرض</small></div><div class="sc" ${m.score?`aria-label="${t(m.home)} ${m.score[0]}، ${t(m.away)} ${m.score[1]}"`:''}>${m.score?`${m.score[0]}–${m.score[1]}<small>انتهت</small>`:`${m.time}<small>بتوقيت السعودية</small>`}</div><div class="tm">${badge(m.away)}<span>${t(m.away)}</span><small>الضيف</small></div></div>`;
+const pair=m=>`<div class="pair"><div class="tm">${badge(m.home)}<span>${t(m.home)}</span><small>صاحب الأرض</small></div><div class="sc" ${m.score?`aria-label="${t(m.home)} ${m.score[0]}، ${t(m.away)} ${m.score[1]}"`:''}>${m.score?`${m.score[1]}–${m.score[0]}<small>انتهت</small>`:`${m.time}<small>بتوقيت السعودية</small>`}</div><div class="tm">${badge(m.away)}<span>${t(m.away)}</span><small>الضيف</small></div></div>`;
 const face=(id)=>`<div class="t">${badge(id,'')}<b>${t(id)}</b></div>`;
 const next=UP.find(i=>when(i)>Date.now())||UP[UP.length-1];
 /* hero */
@@ -144,7 +144,7 @@ window.refreshSquad=()=>{drawSquad('all');$('#squad-count').textContent=`${squad
 const dlg=$('#dlg');
 const events=m=>!m.goals.length?'<div class="empty">انتهت المباراة بدون أهداف.</div>':`<div class="ev">${m.goals.map(g=>`<div><span class="min">${g.minute}′</span><span><b>${g.scorer}</b>${g.penalty?'<small>ركلة جزاء</small>':g.og?'<small>هدف عكسي</small>':g.assist?`<small>صناعة: ${g.assist}</small>`:''}</span><em>${t(g.team)}</em></div>`).join('')}</div>`;
 const lineups=m=>m.lineups?`<h4>التشكيلة الأساسية</h4><div class="lu">${m.lineups.map((l,i)=>`<div><h5>${t(i?m.away:m.home)} <small dir="ltr">${l.formation}</small></h5><ol>${l.players.map(p=>`<li>${p}</li>`).join('')}</ol></div>`).join('')}</div>`:'';
-const formOf=id=>{const f=forms[id];if(!f)return `<div><h5>${t(id)}</h5><div class="empty">لا تتوفر نتائج موثّقة بعد.</div></div>`;return `<div><h5>${t(id)}</h5>${f.games.map(g=>{const h=g[1]===t(id),a=h?g[3]:g[4],b=h?g[4]:g[3],s=a>b?['w','فوز']:a<b?['l','خسارة']:['d','تعادل'];return `<div class="fr"><span class="tag ${s[0]}">${s[1]}</span><span>${g[1]} <span class="s">${g[3]}–${g[4]}</span> ${g[2]}</span><small>${g[0]}${g[5]?' · '+g[5]:''}</small></div>`}).join('')}</div>`};
+const formOf=id=>{const f=forms[id];if(!f)return `<div><h5>${t(id)}</h5><div class="empty">لا تتوفر نتائج موثّقة بعد.</div></div>`;return `<div><h5>${t(id)}</h5>${f.games.map(g=>{const h=g[1]===t(id),a=h?g[3]:g[4],b=h?g[4]:g[3],s=a>b?['w','فوز']:a<b?['l','خسارة']:['d','تعادل'];return `<div class="fr"><span class="tag ${s[0]}">${s[1]}</span><span>${g[1]} <span class="s">${g[4]}–${g[3]}</span> ${g[2]}</span><small>${g[0]}${g[5]?' · '+g[5]:''}</small></div>`}).join('')}</div>`};
 function openM(id){
  const m=matches[id],fh=m.home==='fayha';
  const facts=[['الملعب',m.stadium],['المدينة',m.city],['الأرض للفيحاء',fh?'داخل الأرض':'خارج الأرض']].filter(x=>x[1]);
