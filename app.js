@@ -33,7 +33,7 @@ const forms={
 
 /* ===== V5 · بيانات مراجَعة بتاريخ 27 سبتمبر 2026 ===== */
 const sourceBase='https://www.fotmob.com/';
-Object.assign(teams,{qadsiah:{name:'القادسية',logo:'',fm:101714},fateh:{name:'الفتح',logo:'',fm:177356},diriyah:{name:'الدرعية',logo:'',fm:1787233},nassr:{name:'النصر',logo:'',fm:101918},taawoun:{name:'التعاون',logo:'assets/taawoun.png',fm:205686},abha:{name:'أبها',logo:'assets/abha.png',fm:150414},faisaly:{name:'الفيصلي',logo:'assets/faisaly.png',fm:205687}});
+Object.assign(teams,{qadsiah:{name:'القادسية',logo:'',fm:101919},fateh:{name:'الفتح',logo:'',fm:177356},diriyah:{name:'الدرعية',logo:'',fm:1787233},nassr:{name:'النصر',logo:'',fm:101918},taawoun:{name:'التعاون',logo:'assets/taawoun.png',fm:205686},abha:{name:'أبها',logo:'assets/abha.png',fm:150414},faisaly:{name:'الفيصلي',logo:'assets/faisaly.png',fm:205687}});
 Object.assign(matches,{
  faisaly:{home:'fayha',away:'faisaly',date:'31 أكتوبر 2026',time:'17:55',round:12,stadium:'مدينة المجمعة الرياضية',city:'المجمعة',score:[4,1],goals:[
   {minute:'30',team:'faisaly',scorer:'عبدالرحمن الصفري',assist:'ياسين برناوي'},
