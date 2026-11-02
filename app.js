@@ -3,7 +3,7 @@ const teams = {
  fayha:{name:'الفيحاء',logo:'logo.png'},riyadh:{name:'الرياض',logo:'assets/riyadh.png'},khaleej:{name:'الخليج',logo:'assets/khaleej.png'},ahli:{name:'الأهلي',logo:'assets/ahli.png'},hazem:{name:'الحزم',logo:'assets/hazem.png'},shabab:{name:'الشباب',logo:'assets/shabab.png'},ittihad:{name:'الاتحاد',logo:'assets/ittihad.png'},kholood:{name:'الخلود',logo:'assets/kholood.png'}
 };
 const forms={
- fayha:{source:'teams/582749/overview/al-fayha',games:[['22 أكتوبر','الحزم','الفيحاء',2,2],['19 أكتوبر','الفيحاء','الأهلي',2,3],['15 أكتوبر','الخليج','الفيحاء',2,0],['11 أكتوبر','الفيحاء','الرياض',1,1],['12 سبتمبر','الشباب','الفيحاء',0,0]]},
+ fayha:{source:'teams/582749/overview/al-fayha',games:[['31 أكتوبر','الفيحاء','الفيصلي',4,1],['22 أكتوبر','الحزم','الفيحاء',2,2],['19 أكتوبر','الفيحاء','الأهلي',2,3],['15 أكتوبر','الخليج','الفيحاء',2,0],['11 أكتوبر','الفيحاء','الرياض',1,1]]},
  riyadh:{source:'teams/582739/overview/al-riyadh',games:[['13 سبتمبر','الرياض','الخلود',2,0],['7 سبتمبر','الخليج','الرياض',0,0],['4 سبتمبر','الأهلي','الرياض',5,0],['28 أغسطس','الرياض','نيوم',1,0],['25 أغسطس','الشباب','الرياض',3,3]]},
  khaleej:{source:'teams/550433/overview/al-khaleej',games:[['12 سبتمبر','الخليج','النصر',1,1],['7 سبتمبر','الخليج','الرياض',0,0],['3 سبتمبر','نيوم','الخليج',3,0],['28 أغسطس','الخليج','الهلال',1,5],['25 أغسطس','أبها','الخليج',1,1]]},
  ahli:{source:'teams/2530/overview/al-ahli',games:[['19 سبتمبر','صن داونز','الأهلي',2,1,'كأس القارات للأندية'],['14 سبتمبر','الأهلي','باختاكور',1,1,'نخبة آسيا'],['11 سبتمبر','الأهلي','الحزم',3,1],['8 سبتمبر','القادسية','الأهلي',3,2],['4 سبتمبر','الأهلي','الرياض',5,0]]},
@@ -33,9 +33,20 @@ const forms={
 
 /* ===== V5 · بيانات مراجَعة بتاريخ 27 سبتمبر 2026 ===== */
 const sourceBase='https://www.fotmob.com/';
-Object.assign(teams,{taawoun:{name:'التعاون',logo:'assets/taawoun.png',fm:205686},abha:{name:'أبها',logo:'assets/abha.png',fm:150414},faisaly:{name:'الفيصلي',logo:'assets/faisaly.png',fm:205687}});
+Object.assign(teams,{qadsiah:{name:'القادسية',logo:'',fm:101714},fateh:{name:'الفتح',logo:'',fm:177356},diriyah:{name:'الدرعية',logo:'',fm:1787233},nassr:{name:'النصر',logo:'',fm:101918},taawoun:{name:'التعاون',logo:'assets/taawoun.png',fm:205686},abha:{name:'أبها',logo:'assets/abha.png',fm:150414},faisaly:{name:'الفيصلي',logo:'assets/faisaly.png',fm:205687}});
 Object.assign(matches,{
- faisaly:{home:'fayha',away:'faisaly',date:'31 أكتوبر 2026',time:'17:55',round:12,stadium:'مدينة المجمعة الرياضية',city:'المجمعة'},
+ faisaly:{home:'fayha',away:'faisaly',date:'31 أكتوبر 2026',time:'17:55',round:12,stadium:'مدينة المجمعة الرياضية',city:'المجمعة',score:[4,1],goals:[
+  {minute:'30',team:'faisaly',scorer:'عبدالرحمن الصفري',assist:'ياسين برناوي'},
+  {minute:'43',team:'fayha',scorer:'فاشون ساكالا'},
+  {minute:'57',team:'fayha',scorer:'زياد الصحفي',assist:'جيسون ريميسيرو'},
+  {minute:'66',team:'fayha',scorer:'جيسون ريميسيرو',assist:'فاشون ساكالا'},
+  {minute:'90+1',team:'fayha',scorer:'هوغو مورا',assist:'فاشون ساكالا'}]},
+ /* ===== V8 · المباريات القادمة (مراجعة 2 نوفمبر 2026) — مواعيد ما بعد الجولة 13 مبدئية حتى تعلنها الرابطة ===== */
+ qadsiah:{home:'qadsiah',away:'fayha',date:'الخميس 5 نوفمبر 2026',time:'19:30',round:13,stadium:'ملعب مدينة الأمير محمد بن فهد الرياضية',city:'الدمام'},
+ fateh:{home:'fayha',away:'fateh',date:'الجمعة 20 نوفمبر 2026',time:'',round:14,stadium:'مدينة المجمعة الرياضية',city:'المجمعة'},
+ diriyah:{home:'diriyah',away:'fayha',date:'الخميس 26 نوفمبر 2026',time:'',round:15,stadium:'يُحدد لاحقًا',city:'الرياض'},
+ riyadhCup:{home:'riyadh',away:'fayha',date:'الاثنين 30 نوفمبر 2026',time:'',comp:'كأس خادم الحرمين الشريفين',stadium:'يُحدد لاحقًا',city:'الرياض'},
+ nassr:{home:'fayha',away:'nassr',date:'الخميس 3 ديسمبر 2026',time:'',round:16,stadium:'مدينة المجمعة الرياضية',city:'المجمعة'},
  abha:{home:'fayha',away:'abha',date:'28 أغسطس 2026',time:'',round:4,stadium:'مدينة المجمعة الرياضية',city:'المجمعة',score:[3,2],goals:[
   {minute:'32',team:'fayha',scorer:'لازارو فينيسيوس'},
   {minute:'56',team:'fayha',scorer:'لازارو فينيسيوس'},
@@ -44,11 +55,11 @@ Object.assign(matches,{
   {minute:'90+4',team:'abha',scorer:'ميتشي باتشوايي',penalty:true}]},
  taawoun:{home:'taawoun',away:'fayha',date:'25 أغسطس 2026',time:'',round:3,stadium:'ملعب الأول',city:'بريدة',score:[0,0],goals:[]}
 });
-const kick={faisaly:'2026-10-31T17:55'};
-const UP=Object.keys(kick),PREV=['hazem','ahli','khaleej','riyadh','shabab'];
+const kick={qadsiah:'2026-11-05T19:30',fateh:'2026-11-20T19:00',diriyah:'2026-11-26T19:00',riyadhCup:'2026-11-30T19:00',nassr:'2026-12-03T19:00'};
+const UP=Object.keys(kick),PREV=['faisaly','hazem','ahli','khaleej','riyadh'];
 const R=window.remote||{};Object.entries(R.matches||{}).forEach(([i,v])=>{if(matches[i]){Object.assign(matches[i],v.m||{});if(v.k)kick[i]=v.k}});window.SITE={matches,kick,UP};
-const S=Object.assign({pos:14,pts:8,p:11,gf:12,ga:19,w:1,d:5,l:5},R.standing||{});
-const leaders={goals:[['هوغو مورا','moura',3],['لازارو فينيسيوس','lazaro',3]],assists:[['أحمد بامسعود','bamsaud',2],['نواف الحارثي','nawaf',1],['لازارو فينيسيوس','lazaro',1]]};
+const S=Object.assign({pos:13,pts:11,p:12,gf:16,ga:20,w:2,d:5,l:5},R.standing||{});
+const leaders={goals:[['هوغو مورا','moura',4],['لازارو فينيسيوس','lazaro',3],['فاشون ساكالا','https://images.fotmob.com/image_resources/playerimages/825765.png',3]],assists:[['فاشون ساكالا','https://images.fotmob.com/image_resources/playerimages/825765.png',2],['أحمد بامسعود','bamsaud',2],['لازارو فينيسيوس','lazaro',1]]};
 const squad=[
  {n:'عبدالرؤوف الدقيل',p:'gk',pos:'حارس مرمى',no:'1',id:1554630},
  {n:'أورلاندو موسكيرا',p:'gk',pos:'حارس مرمى',no:'52',id:531913},
@@ -94,18 +105,19 @@ const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>
 const fmLogo=i=>`https://images.fotmob.com/image_resources/logo/teamlogo/${i}.png`;
 const badge=(id,c='badge')=>{const T=teams[id];return `<img class="${c}" src="${T.logo||fmLogo(T.fm)}" data-fm="${T.fm||''}" data-n="${T.name[0]}" alt="شعار ${T.name}">`};
 const t=id=>teams[id].name;
+const lab=m=>m.comp||`دوري روشن السعودي · الجولة ${m.round}`;
 const st=m=>{const h=m.home==='fayha',f=h?m.score[0]:m.score[1],a=h?m.score[1]:m.score[0];return f>a?['w','فوز']:f<a?['l','خسارة']:['d','تعادل']};
 const when=id=>new Date(kick[id]+':00+03:00');
-const pair=m=>`<div class="pair"><div class="tm">${badge(m.home)}<span>${t(m.home)}</span><small>صاحب الأرض</small></div><div class="sc" ${m.score?`aria-label="${t(m.home)} ${m.score[0]}، ${t(m.away)} ${m.score[1]}"`:''}>${m.score?`${m.score[1]}–${m.score[0]}<small>انتهت</small>`:`${m.time}<small>بتوقيت السعودية</small>`}</div><div class="tm">${badge(m.away)}<span>${t(m.away)}</span><small>الضيف</small></div></div>`;
+const pair=m=>`<div class="pair"><div class="tm">${badge(m.home)}<span>${t(m.home)}</span><small>صاحب الأرض</small></div><div class="sc" ${m.score?`aria-label="${t(m.home)} ${m.score[0]}، ${t(m.away)} ${m.score[1]}"`:''}>${m.score?`${m.score[1]}–${m.score[0]}<small>انتهت</small>`:`${m.time||'—'}<small>${m.time?'بتوقيت السعودية':'الوقت يُعلن لاحقًا'}</small>`}</div><div class="tm">${badge(m.away)}<span>${t(m.away)}</span><small>الضيف</small></div></div>`;
 const face=(id)=>`<div class="t">${badge(id,'')}<b>${t(id)}</b></div>`;
 const next=UP.find(i=>when(i)>Date.now())||UP[UP.length-1];
 /* hero */
 (function(){
  const m=matches[next],f=forms.fayha.games.map(g=>{const h=g[1]==='الفيحاء',a=h?g[3]:g[4],b=h?g[4]:g[3];return a>b?['w','ف']:a<b?['l','خ']:['d','ت']});
- $('#hero-box').innerHTML=`<span class="notice"><i></i>المباراة القادمة · دوري روشن السعودي · الجولة ${m.round}</span>
+ $('#hero-box').innerHTML=`<span class="notice"><i></i>المباراة القادمة · ${lab(m)}</span>
  <h1>الفيحاء × ${t(m.home==='fayha'?m.away:m.home)}<br><span>${m.date}</span></h1>
  <p class="sub">${m.stadium} · ${m.city} ${m.home==='fayha'?'· على أرضنا':'· خارج الأرض'}</p>
- <div class="face">${face(m.home)}<div class="mid"><div class="vs">VS</div><div class="time">${m.time}</div><div class="date">بتوقيت السعودية</div></div>${face(m.away)}</div>
+ <div class="face">${face(m.home)}<div class="mid"><div class="vs">VS</div><div class="time">${m.time||'—'}</div><div class="date">بتوقيت السعودية</div></div>${face(m.away)}</div>
  <div class="cd" id="cd" aria-live="off"><div><b>0</b><small>يوم</small></div><div><b>0</b><small>ساعة</small></div><div><b>0</b><small>دقيقة</small></div><div><b>0</b><small>ثانية</small></div></div>
  <div class="acts"><button class="btn or" data-m="${next}">تفاصيل المباراة</button><a class="btn ghost" href="#tickets">التذاكر</a><button class="btn ghost" data-share="${next}">مشاركة</button></div>
  <div class="formrow">آخر 5 للفيحاء: ${f.map(x=>`<span class="dot ${x[0]}">${x[1]}</span>`).join('')}</div>`;
@@ -114,13 +126,13 @@ const next=UP.find(i=>when(i)>Date.now())||UP[UP.length-1];
  tick();setInterval(tick,1000);
 })();
 /* upcoming + results */
-$('#upcoming').innerHTML=UP.map(id=>{const m=matches[id];return `<button class="fx" data-m="${id}"><div class="m"><span>الجولة ${m.round}${id===next?' · التالية':''}</span><span>${m.date}</span></div>${pair(m)}<div class="f"><span>${m.stadium}</span><span>التفاصيل ↗</span></div></button>`}).join('');
+$('#upcoming').innerHTML=UP.map(id=>{const m=matches[id];return `<button class="fx" data-m="${id}"><div class="m"><span>${m.comp||'الجولة '+m.round}${id===next?' · التالية':''}</span><span>${m.date}</span></div>${pair(m)}<div class="f"><span>${m.stadium}</span><span>التفاصيل ↗</span></div></button>`}).join('');
 $('#results').innerHTML=PREV.map(id=>{const m=matches[id],s=st(m);return `<button class="rc" data-m="${id}"><div class="m"><span>الجولة ${m.round} · ${m.date}</span><span class="tag ${s[0]}">${s[1]}</span></div>${pair(m)}<div class="f" style="margin-top:10px;font-size:12px;color:var(--mut);font-weight:700">الأهداف والتفاصيل ↗</div></button>`}).join('');
 $('#side').innerHTML=`<div class="card stand"><h3>ترتيب الفيحاء في دوري روشن</h3><div class="pos"><b>${S.pos}</b><span>المركز من 18 فريقًا<br>${S.pts} نقاط بعد ${S.p} جولات</span></div>
 <div class="stats4"><div><b>${S.p}</b><small>لعب</small></div><div><b>${S.gf}</b><small>له</small></div><div><b>${S.ga}</b><small>عليه</small></div><div><b>${S.gf-S.ga>0?"+":""}${S.gf-S.ga}</b><small>الفارق</small></div></div>
-<p class="note" style="color:#9fb0e6">${S.w} فوز · ${S.d} تعادل · ${S.l} خسائر.${R.standing?"":" الترتيب بتاريخ 24 أكتوبر 2026."}</p></div>
+<p class="note" style="color:#9fb0e6">${S.w} فوز · ${S.d} تعادل · ${S.l} خسائر.${R.standing?"":" الترتيب بتاريخ 2 نوفمبر 2026 بعد الجولة 12، وبعض الفرق لعبت مباراة أقل."}</p></div>
 <div class="card"><h3>آخر الإصابات</h3><div class="injl">${squad.filter(p=>p.injuryType||p.inj).map(p=>`<div class="injr"><b>${p.n}</b><small>${p.pos} · ${injuryText(p)}</small></div>`).join('')||'<div class="empty">لا إصابات معلنة.</div>'}</div><p class="note">حسب إعلان النادي قبل مباراة الحزم (22 أكتوبر 2026)؛ تُحدَّث المدد عند إعلانها.</p></div>
-<div class="card"><h3>هدافو الفريق</h3><div class="lead">${leaders.goals.map(p=>`<figure><img src="assets/${p[1]}.png" alt="${p[0]}">${p[0]}<b>${p[2]} هدف</b></figure>`).join('')}</div><h3 style="margin-top:18px">الأكثر صناعة</h3><div class="lead">${leaders.assists.map(p=>`<figure><img src="assets/${p[1]}.png" alt="${p[0]}">${p[0]}<b>${p[2]} تمريرة</b></figure>`).join('')}</div><p class="note">إحصاءات الدوري حتى الجولة 11 (22 أكتوبر 2026) من تقارير المباريات.</p></div>`;
+<div class="card"><h3>هدافو الفريق</h3><div class="lead">${leaders.goals.map(p=>`<figure><img src="${p[1].includes('/')?p[1]:'assets/'+p[1]+'.png'}" alt="${p[0]}">${p[0]}<b>${p[2]} هدف</b></figure>`).join('')}</div><h3 style="margin-top:18px">الأكثر صناعة</h3><div class="lead">${leaders.assists.map(p=>`<figure><img src="${p[1].includes('/')?p[1]:'assets/'+p[1]+'.png'}" alt="${p[0]}">${p[0]}<b>${p[2]} تمريرة</b></figure>`).join('')}</div><p class="note">إحصاءات الدوري حتى الجولة 12 (31 أكتوبر 2026) من تقارير المباريات.</p></div>`;
 /* news, store */
 const NC={all:'الكل',match:'المباريات',train:'التمارين والجاهزية',transfer:'الانتقالات'};
 function drawNews(k){
@@ -148,7 +160,7 @@ const formOf=id=>{const f=forms[id];if(!f)return `<div><h5>${t(id)}</h5><div cla
 function openM(id){
  const m=matches[id],fh=m.home==='fayha';
  const facts=[['الملعب',m.stadium],['المدينة',m.city],['الأرض للفيحاء',fh?'داخل الأرض':'خارج الأرض']].filter(x=>x[1]);
- $('#dlg-c').innerHTML=`<div class="mh"><button class="x" data-close>إغلاق ×</button><div class="lg" id="dlg-t">دوري روشن السعودي · الجولة ${m.round}<br>${t(m.home)} × ${t(m.away)}</div>${pair(m)}<p style="text-align:center;color:#b9c4ee;margin-top:14px;font-size:14px">${m.date}${m.time?' · '+m.time+' بتوقيت السعودية':''}</p></div>
+ $('#dlg-c').innerHTML=`<div class="mh"><button class="x" data-close>إغلاق ×</button><div class="lg" id="dlg-t">${lab(m)}<br>${t(m.home)} × ${t(m.away)}</div>${pair(m)}<p style="text-align:center;color:#b9c4ee;margin-top:14px;font-size:14px">${m.date}${m.time?' · '+m.time+' بتوقيت السعودية':''}</p></div>
  <div class="mb"><div class="facts">${facts.map(x=>`<div><small>${x[0]}</small><b>${x[1]}</b></div>`).join('')}</div>
  ${m.score?`<h4>الأهداف</h4>${events(m)}${lineups(m)}`:`<h4>آخر 5 مباريات للفريقين</h4><div class="fm">${formOf(m.home)}${formOf(m.away)}</div>`}
  <div class="macts">${m.score?'':`<button class="btn or sm" data-share="${id}">مشاركة المباراة</button><a class="btn line sm" href="#tickets" data-close>التذاكر</a>`}${m.source?`<a class="btn line sm" href="${sourceBase+m.source}" target="_blank" rel="noopener">المصدر على FotMob ↗</a>`:''}</div></div>`;
